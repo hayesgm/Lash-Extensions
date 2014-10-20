@@ -1,0 +1,9 @@
+<script type='text/javascript'>
+  function weather(o) {
+    document.getElementById('temp').innerHTML = o.query.results.channel.item.condition.temp;
+  }
+</script>
+
+<script type='text/javascript' src='http://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20location%3D%2230341%22&format=json&callback=weather'></script>
+
+<h1>The tempurature is <span id=\"temp\">(loading)</span> degrees.</h1>

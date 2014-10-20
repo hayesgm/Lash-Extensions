@@ -1,0 +1,8 @@
+{
+  "id": "com.hayesgm.HackerNewsReader",
+  "name": "HackerNews Reader",
+  "version": "0.0.1e",
+  "desc": "Make HackerNews readable",
+  "pageScriptFile": "./pageScript.js",
+  "pageScriptDomain": "news.ycombinator.com"
+}

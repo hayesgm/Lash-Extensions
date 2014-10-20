@@ -1,0 +1,8 @@
+{
+    "id": "com.hayesgm.privacyPolicyFinder",
+    "version": "0.0.4",
+    "name": "Privacy Policy Finder",
+    "desc": "Instantly view a page's privacy policy.",
+    "panelIcon": "\uf0e3",
+    "panelScriptFile": "./panelScript.js"
+}

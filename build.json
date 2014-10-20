@@ -1,0 +1,5 @@
+{
+    "extensions": ["AdblockLight", "BackgroundColorer", "HackerNewsReader", "PrivacyPolicyFinder", "Rotater", "Weather", "Zoomer"],
+    "removed": [],
+    "default": []
+}

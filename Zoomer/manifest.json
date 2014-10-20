@@ -1,0 +1,9 @@
+{
+    "id": "com.hayesgm.zoomer",
+    "version": "0.0.5",
+    "name" : "Zoomer",
+    "desc": "Zoom to 150%.",
+    "pageScriptFile": "./pageScript.js",
+    "panelIcon": "\uf1e5",
+    "panelScriptFile": "./panelScript.js"
+}

@@ -1,0 +1,7 @@
+{
+    "id": "com.hayesgm.rotater",
+    "version": "0.0.3",
+    "name" : "Rotater",
+    "desc": "Rotate all pages 10 degrees.",
+    "pageScriptFile": "./pageScript.js"
+}

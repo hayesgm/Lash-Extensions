@@ -1,0 +1,9 @@
+{
+  "id": "com.hayesgm.background-colorer",
+  "version": "0.0.3",
+  "name" : "Background Colorer",
+  "desc": "Change background colors to blue.",
+  "panelIcon": "\uf1fc",
+  "panelScriptFile": "./panelScript.js",
+  "pageScriptFile": "./pageScript.js"
+}
