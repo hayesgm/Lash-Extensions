@@ -7,7 +7,7 @@ tagline: The Extensive Mobile Browser
 
 Lash brings new life to browsing the web on your iPhone.  In one click, enable AdBlock to remove ads from your favorite sites.  Or come find one of so many extensions to make your experience great.
 
-![screenshot](assets/images/screen.png)
+![screenshot](assets/images/lash-screen.png)
 
 # Get Lash
 
