@@ -18,7 +18,6 @@ MyExtension
 
 You store all metadata about your extension in `metadata.json`.  This is a JSON file which should include the following keys.
 
-```
  * `id` - A globally unique ID for your extension (e.g. `com.example.MyApp`)
  * `version` - The current version of your extension
  * `name` - A display name for your extension
@@ -27,7 +26,7 @@ You store all metadata about your extension in `metadata.json`.  This is a JSON 
  * `panelIcon` - A Font-Awesome icon to display in the toolbar
  * `pageScriptFile` - A JavaScript file containing the code of your Page Script (see `Page Scripts`)
  * `pageScriptDomain` - A list of domains on which to run your Page Script
-```
+
 
 # Panel Scripts
 
