@@ -58,7 +58,39 @@ Lash exposes several JavaScript APIs, depicted below:
 
 ## Notifications
 
-TODO
+Notifications allow your page script to communicate with other parts of your extension.  Say you're writing an page script which let's a user know which third-party cookies exist on this site.  You could send a notification with an array of the names of the cookies.
+
+myPageScript.js
+```javascript
+Lash.notify('networks', ['Some Ad Network', 'Some Other Ad Network']);
+```
+
+These notifications will be held in a buffer until a user clicks into your extension's panel.  Once the panel is loaded, your panel script will receive notifications by subscribing to notifications for your extension:
+
+myPanel.html
+```html
+<html>
+  <body>
+    <div>You are being tracked by <span id="trackers">(loading)</span>.</div>
+
+    <script type="application/javascript">
+      Lash.receive(function(event, payload) {
+        if (event == 'networks') {
+          document.findElementById('trackers').innerText = payload.join(', ');
+        }
+      });
+    </script>
+  </body>
+</html>
+```
+
+## Badges
+
+If you have a panel icon, you may wish to display a badge or gem next to the icon to notify the user your extension has done something (e.g. has blocked 5 ads on this page).  You can set the badge icon text using the following code in a page script:
+
+```javascript
+Lash.setBadgeIcon("2");
+```
 
 # Collaborating
 
