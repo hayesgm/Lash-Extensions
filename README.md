@@ -14,41 +14,43 @@ Lash extensions can utilize any of the following core functionalities.
 
 ## Page Scripts
 
-Page scripts run on the actual web pages when a user visits a qualifying domain.  E.g. if you're writing a reader extension for Reddit, you would add a page script for reddit.com.  This script would add CSS to the page and any other interactions you'd like to enhance.  These scripts can communciate with your extension via `notifications`.
+Page scripts run on the web pages when a user visits a qualifying URL.  URLs can be filitered by domain or left as a wildcard.  This, if you're writing a Reader extension for Reddit, you would add a page script for reddit.com.  Alternatively, if you're listing Third Party Tracking Cookies, you would have the script run on a wildcard domain.  Your scripts are run a closure, but otherwise you're open to add any functionality you need.  You can, for instance, add CSS to the page, or override JavaScript events to enhance the user experience.  Your page script can communciate with your extension via `notifications`.  As page scripts may run on a large number of pages, they should be kept as light as possible (e.g. no JQuery injection).
 
 ## Panel Scripts
 
-Panel scripts are just like page scripts, except they only run when a user clicks the extensions icon on the toolbar.  Panel scripts run in the active page, but at a time when a user expects interaction.  A panel script could, for instance, run as a password manager and log the user in to certain websites.  If you're deciding between a page script and a panel script, remember that panel scripts can have a better user interaction since the user is expecting to interact with your extension.  Additionally, you won't slow each page load with interpreting your extension.
+Panel scripts are just like page scripts, except they only run when a user clicks your extension icon in the toolbar.  Panel scripts always run on the active page.  A panel script may, for instance, act as a password manager and log the user in to a specific website when clicked.
+
+If you're deciding between a page script and a panel script, remember that panel scripts are better for user interaction as the user is expecting to interact with your extension.  Page scripts should be generally passive and communicate to the user through `notifications`.
 
 ## Panels
 
-The panel body HTML page is a full HTML page that appears in a popup when the user selects your icon from the toolbar.  This will be full-screen for iOS apps and a panel for iPads.  Panel scripts give you an easy way to interact directly with the user.  You may, for instance, allow the user to change settings or log in to your app.  You'll have access to local storage or you can push the data to your back-end servers.
+Panels give you an easy way to interact directly with the user.  Panels pop up when a user selects your extension icon from the toolbar.  They are a fully interactive HTML page which you specific.  These pages are the best place to interact with a user (e.g. to allow a user to login to your extension or change settings).  You specify the complete panel HTML in `panelBody` or `panelBodyFile`.  Note: panels are full screen for iOS apps, but only a popup panel on iPads.  They may be created or destroyed frequently, so data should be stored in local storage or remotely.
 
 # Lash File Structure
 
-When you write Lash extensions, you'll add a sub-folder to this repository.  The core file will be manifest.json, but you should use the following folder structure:
+When you write Lash extensions, you'll add a sub-folder to this repository.  The core file will be `manifest.json`, but you should use the following folder structure:
 
 ```sh
 MyExtension
   - manifest.json
-  - .. assets ..
+  - .. your assets ..
 ```
 
 ## Manifest.json
 
-You store all metadata about your extension in `metadata.json`.  This is a JSON file which should include some of the following keys based on what you want to do with your extension:
+You store all meta-data about your extension in `manifest.json`.  `manifest.json` is a JSON-encoded text file which includes some of the following keys, based on which functionalities your extension needs:
 
- * `id` - A globally unique ID for your extension (e.g. `com.example.MyApp`)
- * `version` - The current version of your extension
- * `name` - A display name for your extension
- * `desc` - A short descrition of your extension
+ * `id` - A globally unique ID for your extension (e.g. `com.example.MyApp`) - required
+ * `version` - The current version of your extension - required
+ * `name` - A display name for your extension - required
+ * `desc` - A short descrition of your extension - required
  * `panelScriptFile` - A JavaScript asset file containing the code of your `Panel Script`
  * `panelIcon` - A Font-Awesome icon to display in the toolbar
  * `panelBodyFile` - An HTML asset file with the body of your `Panel`
  * `pageScriptFile` - A JavaScript file containing the code of your `Page Script`
  * `pageScriptDomain` - A list of domains on which to run your Page Script
 
-Note: When you build your lash extension, `pageScriptFile` will be read, closed, and minified into the `pageScript` key.  The same applies to `pageScriptDomain` and (without minification) `panelBody`.  You can, if you wish, write this directly into `manifest.json`, but this is not recommended.
+Note: When your `manifest.json` is cross-compiled into `BaseExtensions.json`, keys such as `pageScriptFile` are read from your extensions' assets.  The file is read, minified and inserted into the `pageScript` key.  This same applies to `panelScriptFile` and (without the minification) `panelBodyFile`.  You can, if you wish, write your code directly into `pageScript`, `panelScript`, or `panelBody`, but this is not recommended.
 
 # Lash JavaScript APIs
 
