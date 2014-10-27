@@ -1,14 +1,16 @@
 # Lash Extensions
 
-Lash is a web browser for iOS which allows community-sourced extensions.  Lash extensions work like normal browser extensions, you can execute scripts on specific domains (e.g. for AdBlock), add panel buttons on the toolbar to let a user run your extension on the page or in a panel pop-up.  Lash keeps the browser experience light and let's the extensions run the show.
+Lash is a web browser for iOS which allows community-sourced extensions.  Lash extensions work like normal browser extensions, you can set scripts on visited pages (like an AdBlock), add toolbar buttons to let a user run your extension on demand or in a pop-up.  Lash keeps the browser experience light and let's extensions run the show.
 
 ## Community Sourced
 
-Lash extensions are written by the community and hosted (for now) in this GitHub repo.  To write an extension, fork this repo and add your extension in its own folder.  When you're ready to test, point your Lash browser to your fork and ensure the extension works.  Finally, you can add a pull request and we'll pull your extension so you can share it with everyone.
+Lash extensions are written by the community and hosted in this GitHub repo.  You can get started writing Lash extensions in seconds.  Just fork this repo and add your extension in its own sub-folder.  When you're ready to test, point the Lash browser to your fork and see your extension live.  When you're done, submit a pull request, and we'll help share your extension with everyone.
 
 # How to write a Lash Extension
 
-Lash extensions are kept as sub-folders to this repo.  They consist of a `manifest.json` which describes the extension and the scripts & assets it uses.  There are three main types of Lash functions:
+Lash extensions are kept as sub-folders to this repo.  They consist of a manifest file and other asset files.  `manifest.json` describes the extension, scripts to run and associated assets (HTML, JS or images).
+
+Lash extensions can utilize any of the following core functionalities.
 
 ## Page Scripts
 
@@ -65,6 +67,9 @@ TODO
 5) Test your extension by setting Lash's "Extension source" to `https://rawgit.com/<your repo>/Lash-Extensions/master/BaseExtensions.json`
 6) Submit a pull request (note `License` below)
 
+# Future
+
+* Consider moving extensions away from a single-repo.  Need to balance this against quality-checking extensions.
 # License
 
 Lash Extensions is licensed under the Apache 2.0 license.  By submitting a pull request to this repo, you assert that you own full copyright of the submission and that you agree to release the extension under the same Apache 2.0 license.
