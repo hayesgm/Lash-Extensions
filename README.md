@@ -62,12 +62,12 @@ TODO
 
 # Collaborating
 
-1) Fork this project
-2) Add your Lash Extension in a new sub-folder
-3) Make sure to use a unique `id`
-4) Add your extension's folder name to `build.json`
-5) Test your extension by setting Lash's "Extension source" to `https://rawgit.com/<your repo>/Lash-Extensions/master/BaseExtensions.json`
-6) Submit a pull request (note `License` below)
+1. Fork this project
+2. Add your Lash Extension in a new sub-folder
+3. Make sure to use a unique `id`
+4. Add your extension's folder name to `build.json`
+5. Test your extension by setting Lash's "Extension source" to `https://rawgit.com/<your repo>/Lash-Extensions/master/BaseExtensions.json`
+6. Submit a pull request (note `License` below)
 
 # Future
 
