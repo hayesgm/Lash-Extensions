@@ -1,8 +1,8 @@
 {
   "id": "com.hayesgm.background-colorer",
-  "version": "0.0.3",
+  "version": "0.0.1c",
   "name" : "Background Colorer",
-  "desc": "Change background colors to blue.",
+  "desc": "Change background colors to gray.",
   "panelIcon": "\uf1fc",
   "panelScriptFile": "./panelScript.js",
   "pageScriptFile": "./pageScript.js"

@@ -1,4 +1,6 @@
 
+Lash.notify("blocked", ["page 1","page 2"]);
+
 /* This is going to start by simply injecting some CSS into the page
  * This should, at the least, be based on the domain */
 var css = window.document.createElement("style")

@@ -1,0 +1,12 @@
+
+<div id="debug"></div>
+
+<div id="info">Loading...</div>
+
+<script type="application/javascript">
+  document.getElementById('debug').innerText = document.documentElement.innerHTML;
+
+  Lash.receive(function(event, payload) {
+    document.getElementById('info').innerText = "Got event: " + event + ", with payload: " + payload;  
+  });
+</script>

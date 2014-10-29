@@ -54,7 +54,7 @@ Note: When your `manifest.json` is cross-compiled into `BaseExtensions.json`, ke
 
 # Lash JavaScript APIs
 
-Lash exposes several JavaScript APIs, depicted below:
+Lash exposes several JavaScript APIs which allow your extension to communicate with Lash and your panels.  It's worth noting that these APIs are not secured and thus a malicious page or other extension could call any of these JavaScript APIs.  You must be careful and validate code or messages on the receiving end.
 
 ## Notifications
 
@@ -69,19 +69,15 @@ These notifications will be held in a buffer until a user clicks into your exten
 
 myPanel.html
 ```html
-<html>
-  <body>
-    <div>You are being tracked by <span id="trackers">(loading)</span>.</div>
+<div>You are being tracked by <span id="trackers">(loading)</span>.</div>
 
-    <script type="application/javascript">
-      Lash.receive(function(event, payload) {
-        if (event == 'networks') {
-          document.findElementById('trackers').innerText = payload.join(', ');
-        }
-      });
-    </script>
-  </body>
-</html>
+<script type="application/javascript">
+  Lash.receive(function(event, payload) {
+    if (event == 'networks') {
+      document.findElementById('trackers').innerText = payload.join(', ');
+    }
+  });
+</script>
 ```
 
 ## Badges

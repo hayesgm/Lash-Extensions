@@ -1,8 +1,10 @@
 {
   "id": "com.hayesgm.AdblockLight",
-  "version": "0.0.1b",
+  "version": "0.0.1e",
   "name": "Adblock Light",
   "desc": "Block a few ads",
   "pageScriptFile": "./pageScript.js",
-  "pageScriptFirst": true
+  "pageScriptFirst": true,
+  "panelBodyFile": "adblock.html",
+  "panelIcon": "\uf132"
 }
