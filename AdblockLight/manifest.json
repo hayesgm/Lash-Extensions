@@ -6,5 +6,6 @@
   "pageScriptFile": "./pageScript.js",
   "pageScriptFirst": true,
   "panelBodyFile": "adblock.html",
-  "panelIcon": "\uf132"
+  "panelIcon": "\uf132",
+  "debug": true
 }

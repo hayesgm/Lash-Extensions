@@ -85,7 +85,7 @@ myPanel.html
 If you have a panel icon, you may wish to display a badge or gem next to the icon to notify the user your extension has done something (e.g. has blocked 5 ads on this page).  You can set the badge icon text using the following code in a page script:
 
 ```javascript
-Lash.setBadgeIcon("2");
+Lash.setBadge("2");
 ```
 
 # Collaborating

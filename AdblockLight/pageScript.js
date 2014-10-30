@@ -1,3 +1,4 @@
+Lash.setBadge("5");
 
 Lash.notify("blocked", ["page 1","page 2"]);
 
